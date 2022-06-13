@@ -24,3 +24,9 @@ alter table review
 	add constraint fk_review_c_idx foreign key(c_idx)
 	references cinema(c_idx)
 	
+insert into review values(seq_review_r_idx.nextVal, '어벤저스꿀잼','와 엔드게임개지렸다', 
+						  sysdate,
+						  3,
+						  1,
+						  1,
+						  1)

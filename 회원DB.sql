@@ -19,6 +19,9 @@ alter table member
 	add constraint  unique_member_m_id unique(m_id);
 	
 alter table member
+	add constraint  unique_member_m_nickname unique(m_nickname);
+	
+alter table member
 	add constraint ck_member_m_garde check( m_grade in( '관리자','일반' ) )
 
 insert into member values(seq_member_m_idx.nextval, '홍길동', 'hong', '1234', '길동이',
@@ -27,4 +30,7 @@ insert into member values(seq_member_m_idx.nextval, '김관리', 'admin', '1234', '
 							'관리자','192.168.0.9', sysdate);
 							
 							
-select * from member							
+select * from member		
+
+
+select m_id from member where m_id = 'admin'
